@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <!-- 채팅방 이름을 표시 -->
+    <TextView
+        android:id="@+id/chatroom_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="채팅방 이름"
+        android:textSize="18sp"
+        android:textColor="@android:color/black" />
+
+    <!-- 참여자 수를 표시 -->
+    <TextView
+        android:id="@+id/chatroom_participants"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="참여자: 0명"
+        android:textSize="14sp"
+        android:textColor="@android:color/darker_gray" /></LinearLayout>
+

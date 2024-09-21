@@ -15,7 +15,7 @@ import com.naver.maps.map.OnMapReadyCallback;
 import com.naver.maps.map.util.FusedLocationSource;
 
 
-public class Map extends AppCompatActivity implements OnMapReadyCallback {
+public class Map<S, O> extends AppCompatActivity implements OnMapReadyCallback {
 
     private static final int LOCATION_PERMISSION_REQUEST_CODE = 1000;
     private FusedLocationSource locationSource; //위치 반환 구현체

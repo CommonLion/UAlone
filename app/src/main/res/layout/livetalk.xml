@@ -11,7 +11,8 @@
         android:layout_height="49dp"
         app:srcCompat="@drawable/chat"
         tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="16dp" />
+        tools:layout_editor_absoluteY="16dp"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/livetalk"
@@ -20,14 +21,16 @@
         android:text="실시간 Talk"
         android:textSize="40dp"
         tools:layout_editor_absoluteX="69dp"
-        tools:layout_editor_absoluteY="8dp" />
+        tools:layout_editor_absoluteY="8dp"
+        tools:ignore="MissingConstraints" />
 
     <SearchView
         android:layout_width="330dp"
         android:layout_height="40dp"
         android:background="@drawable/roundbutton"
         tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="73dp" />
+        tools:layout_editor_absoluteY="73dp"
+        tools:ignore="MissingConstraints" />
 
     <ImageButton
         android:id="@+id/categoryadd"
@@ -45,7 +48,21 @@
         android:layout_width="409dp"
         android:layout_height="616dp"
         tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="149dp">
+        tools:layout_editor_absoluteY="149dp"
+        tools:ignore="MissingConstraints">
 
     </ScrollView>
+
+    <!-- 작업중인 채팅 목록-->
+<!--    <ListView-->
+<!--        android:id="@+id/livetalk"-->
+<!--        android:layout_width="351dp"-->
+<!--        android:layout_height="154dp"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/textView14"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.55"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/text_hotpost"-->
+<!--        app:layout_constraintVertical_bias="0.349" />-->
+
 </androidx.constraintlayout.widget.ConstraintLayout>

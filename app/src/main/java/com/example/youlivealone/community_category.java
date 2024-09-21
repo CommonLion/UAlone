@@ -2,13 +2,16 @@ package com.example.youlivealone;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.ArrayAdapter;
-import android.widget.ImageButton;
-import android.widget.LinearLayout;
 import android.widget.ListView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
 
 public class community_category extends AppCompatActivity {
 
@@ -16,6 +19,43 @@ public class community_category extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.category);
+
+//        List<String> chatRooms = Arrays.asList("채팅방 1", "채팅방 2", "채팅방 3", "채팅방 4", "채팅방 5");
+        // 채팅방 더미 데이터 생성 리스트에서 Map으로 변경
+        List<HashMap<String, Object>> chatRooms = new ArrayList<>();
+        chatRooms.add(new HashMap<String, Object>() {{
+            put("name", "채팅방 1");
+            put("participantCount", 10);
+        }});
+        chatRooms.add(new HashMap<String, Object>() {{
+            put("name", "채팅방 2");
+            put("participantCount", 5);
+        }});
+        chatRooms.add(new HashMap<String, Object>() {{
+            put("name", "채팅방 3");
+            put("participantCount", 20);
+        }});
+        chatRooms.add(new HashMap<String, Object>() {{
+            put("name", "채팅방 4");
+            put("participantCount", 8);
+        }});
+        chatRooms.add(new HashMap<String, Object>() {{
+            put("name", "채팅방 5");
+            put("participantCount", 15);
+        }});
+
+        // RecyclerView 설정
+        RecyclerView recyclerView = findViewById(R.id.chatroom_list);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
+
+        // 어댑터 설정 및 항목 클릭 처리
+        ChatRoomAdapter adapter = new ChatRoomAdapter(chatRooms, chatRoomName -> {
+            Intent intent = new Intent(community_category.this, ChatRoomActivity.class);
+            intent.putExtra("chatroomName", chatRoomName);
+            startActivity(intent);
+        });
+
+        recyclerView.setAdapter(adapter);
 
         //<인기게시글>
         // ListView를 찾기
@@ -39,25 +79,28 @@ public class community_category extends AppCompatActivity {
             startActivity(intent);
         });
 
-        //게시판 선택
-        LinearLayout talksLayout = findViewById(R.id.talks);
+//        //게시판 선택
+//        LinearLayout talksLayout = findViewById(R.id.talks);
+//
+//
+//
+//        // LinearLayout 안에 있는 각 ImageButton 가져와서 클릭 리스너 설정
+//        for (int i = 0; i < talksLayout.getChildCount(); i++) {
+//            View child = talksLayout.getChildAt(i);
+//            if (child instanceof ImageButton) {
+//                ImageButton button = (ImageButton) child;
+//                button.setOnClickListener(new View.OnClickListener() {
+//                    @Override
+//                    public void onClick(View v) {
+//                        Intent intent = new Intent(community_category.this, MessageBoard.class);
+//                        startActivity(intent);
+//                    }
+//                });
+//            }
+//        }
 
-        // LinearLayout 안에 있는 각 ImageButton 가져와서 클릭 리스너 설정
-        for (int i = 0; i < talksLayout.getChildCount(); i++) {
-            View child = talksLayout.getChildAt(i);
-            if (child instanceof ImageButton) {
-                ImageButton button = (ImageButton) child;
-                button.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        Intent intent = new Intent(community_category.this, MessageBoard.class);
-                        startActivity(intent);
-                    }
-                });
-            }
-        }
 
-
+// 채팅방 목록 데이터
 
 
         //<게시글>

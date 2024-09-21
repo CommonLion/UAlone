@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <!-- 해당 텍스트 혹은 블록을 클릭시 전체 실시간 톡방에 대한 페이지로-->
     <TextView
         android:id="@+id/textView14"
         android:layout_width="wrap_content"
@@ -139,9 +140,10 @@
 
     <HorizontalScrollView
         android:id="@+id/categoryScrollView"
-        android:layout_width="326dp"
-        android:layout_height="92dp"
-        android:layout_marginLeft="21dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="21dp"
+        android:layout_marginEnd="21dp"
         android:scrollbars="none"
         app:layout_constraintBottom_toTopOf="@+id/text_post"
         app:layout_constraintEnd_toEndOf="parent"
@@ -150,33 +152,14 @@
         app:layout_constraintTop_toBottomOf="@+id/textView14"
         app:layout_constraintVertical_bias="0.486">
 
-        <LinearLayout
-            android:id="@+id/talks"
-            android:layout_width="wrap_content"
+        <!-- 실시간 talk방은 이전에 선택하는 실시간 주제에서의 실시간 톡방만을 반환한다. -->
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/chatroom_list"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <ImageButton
-                android:id="@+id/btn1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
-                android:text="1" />
-
-            <ImageButton
-                android:id="@+id/btn2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
-                android:text="2" />
-
-            <ImageButton
-                android:id="@+id/btn3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
-                android:text="3" />
-        </LinearLayout>
+            android:orientation="horizontal"
+            android:scrollbars="horizontal" />
     </HorizontalScrollView>
 
     <ListView
