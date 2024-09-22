@@ -6,10 +6,13 @@
     android:layout_height="match_parent">
 
     <!-- 해당 텍스트 혹은 블록을 클릭시 전체 실시간 톡방에 대한 페이지로-->
+    <!-- 해당 텍스트를 추후에 해당 텍스트의 우측에 >추가.
+    그리고 마진을 좌우 일정하게 줘서 다른 블럭들과도 통일된 형태의 포맷으로 예정-->
+
     <TextView
         android:id="@+id/textView14"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="110dp"
+        android:layout_height="38dp"
         android:text="실시간 talk방"
         android:textSize="20dp"
         app:layout_constraintBottom_toTopOf="@+id/materialToolbar"
@@ -152,7 +155,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView14"
         app:layout_constraintVertical_bias="0.486">
 
-        <!-- 실시간 talk방은 이전에 선택하는 실시간 주제에서의 실시간 톡방만을 반환한다. -->
+        <!-- 실시간 talk방은 이전에 선택한 주제에서의 실시간 톡방만을 반환한다. -->
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/chatroom_list"

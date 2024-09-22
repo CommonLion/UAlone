@@ -5,31 +5,39 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+<!-- 해당 채팅 이미지 채팅 글자 지워서 새로운 이미지로 재사용해야함.-->
     <ImageView
         android:id="@+id/imageView3"
         android:layout_width="53dp"
         android:layout_height="49dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/chat"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="16dp"
         tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/livetalk"
         android:layout_width="238dp"
         android:layout_height="57dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="104dp"
         android:text="실시간 Talk"
         android:textSize="40dp"
-        tools:layout_editor_absoluteX="69dp"
-        tools:layout_editor_absoluteY="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
 
     <SearchView
+        android:id="@+id/searchView3"
         android:layout_width="330dp"
         android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
         android:background="@drawable/roundbutton"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="73dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/livetalk"
         tools:ignore="MissingConstraints" />
 
     <ImageButton
@@ -38,24 +46,26 @@
         android:layout_height="40dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.956"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.36"
+        app:layout_constraintStart_toEndOf="@+id/searchView3"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.083"
-        app:srcCompat="@mipmap/ic_launcher" />
+        app:layout_constraintVertical_bias="0.117"
+        app:srcCompat="@drawable/plus" />
 
     <ScrollView
+        android:id="@+id/scrollView2"
         android:layout_width="409dp"
         android:layout_height="616dp"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="149dp"
-        tools:ignore="MissingConstraints">
+        android:layout_marginTop="28dp"
+        app:layout_constraintTop_toBottomOf="@+id/searchView3"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="1dp">
 
     </ScrollView>
 
     <!-- 작업중인 채팅 목록-->
 <!--    <ListView-->
-<!--        android:id="@+id/livetalk"-->
+<!--        android:id="@+id/livetalks"-->
 <!--        android:layout_width="351dp"-->
 <!--        android:layout_height="154dp"-->
 <!--        app:layout_constraintBottom_toTopOf="@+id/textView14"-->

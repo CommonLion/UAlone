@@ -45,6 +45,7 @@
         <activity android:name=".ViewCommentsActivity"/>
         <activity android:name=".ViewLikedPostsActivity"/>
         <activity android:name=".ViewPostsActivity"/>
+        <activity android:name=".LiveTalkActivity" />
 
 
 

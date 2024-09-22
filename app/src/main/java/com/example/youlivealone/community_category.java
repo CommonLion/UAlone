@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -22,6 +23,8 @@ public class community_category extends AppCompatActivity {
 
 //        List<String> chatRooms = Arrays.asList("채팅방 1", "채팅방 2", "채팅방 3", "채팅방 4", "채팅방 5");
         // 채팅방 더미 데이터 생성 리스트에서 Map으로 변경
+        // 정확히는 백엔드에서 Chat 객체를 통째로 넘기고 그것을 리스트로 받는게 맞는 거 같음.
+        // 추후에 연동할 때 리스트 수정해야함.
         List<HashMap<String, Object>> chatRooms = new ArrayList<>();
         chatRooms.add(new HashMap<String, Object>() {{
             put("name", "채팅방 1");
@@ -125,6 +128,15 @@ public class community_category extends AppCompatActivity {
 
 
         //버튼 작동코드들
+
+
+        /*category.xml에서 LiveTalkActivity를 통해서 livetalk.xml로 이동*/
+        TextView liveTalkButton = findViewById(R.id.textView14);
+        liveTalkButton.setOnClickListener(v -> {
+            Intent intent = new Intent(community_category.this, LiveTalkActivity.class);
+            startActivity(intent);
+        });
+
 
         findViewById(R.id.map).setOnClickListener(v -> {
             Intent intent = new Intent(community_category.this, Map.class);
