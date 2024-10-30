@@ -38,10 +38,13 @@
         android:background="@drawable/roundbutton"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/livetalk"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="16dp"
+        />
 
+<!--    채팅추가버튼-->
     <ImageButton
-        android:id="@+id/categoryadd"
+        android:id="@+id/chatAdd"
         android:layout_width="40dp"
         android:layout_height="40dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -52,27 +55,39 @@
         app:layout_constraintVertical_bias="0.117"
         app:srcCompat="@drawable/plus" />
 
-    <ScrollView
-        android:id="@+id/scrollView2"
-        android:layout_width="409dp"
-        android:layout_height="616dp"
-        android:layout_marginTop="28dp"
+<!--    기존의 스크롤 방식이 아닌 recyclerview를 사용해보겠다.-->
+<!--    <ScrollView-->
+<!--        android:id="@+id/scrollView2"-->
+<!--        android:layout_width="409dp"-->
+<!--        android:layout_height="616dp"-->
+<!--        android:layout_marginTop="28dp"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/searchView3"-->
+<!--        tools:ignore="MissingConstraints"-->
+<!--        tools:layout_editor_absoluteX="1dp">-->
+
+<!--    </ScrollView>-->
+
+<!--    &lt;!&ndash; 작업중인 채팅 목록&ndash;&gt;-->
+<!--&lt;!&ndash;    <ListView&ndash;&gt;-->
+<!--&lt;!&ndash;        android:id="@+id/livetalks"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:layout_width="351dp"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:layout_height="154dp"&ndash;&gt;-->
+<!--&lt;!&ndash;        app:layout_constraintBottom_toTopOf="@+id/textView14"&ndash;&gt;-->
+<!--&lt;!&ndash;        app:layout_constraintEnd_toEndOf="parent"&ndash;&gt;-->
+<!--&lt;!&ndash;        app:layout_constraintHorizontal_bias="0.55"&ndash;&gt;-->
+<!--&lt;!&ndash;        app:layout_constraintStart_toStartOf="parent"&ndash;&gt;-->
+<!--&lt;!&ndash;        app:layout_constraintTop_toBottomOf="@+id/text_hotpost"&ndash;&gt;-->
+<!--&lt;!&ndash;        app:layout_constraintVertical_bias="0.349" />&ndash;&gt;-->
+
+    <!-- 전체 채팅방을 보여주는 RecyclerView -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/chatAll"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
         app:layout_constraintTop_toBottomOf="@+id/searchView3"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="1dp">
-
-    </ScrollView>
-
-    <!-- 작업중인 채팅 목록-->
-<!--    <ListView-->
-<!--        android:id="@+id/livetalks"-->
-<!--        android:layout_width="351dp"-->
-<!--        android:layout_height="154dp"-->
-<!--        app:layout_constraintBottom_toTopOf="@+id/textView14"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintHorizontal_bias="0.55"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/text_hotpost"-->
-<!--        app:layout_constraintVertical_bias="0.349" />-->
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="16dp"
+        tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

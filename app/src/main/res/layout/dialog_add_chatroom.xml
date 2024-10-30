@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+
+    <!-- X 버튼 (팝업 닫기) -->
+    <ImageButton
+        android:id="@+id/closeButton"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@android:color/transparent"
+        android:src="@android:drawable/ic_menu_close_clear_cancel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- 방 제목 입력 -->
+    <TextView
+        android:id="@+id/roomTitleLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="방 제목"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/closeButton" />
+
+    <EditText
+        android:id="@+id/roomTitleInput"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="방 제목을 입력하세요"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/roomTitleLabel" />
+
+    <!-- 방 소개 입력 -->
+    <TextView
+        android:id="@+id/roomDescriptionLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="방 소개"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/roomTitleInput" />
+
+    <EditText
+        android:id="@+id/roomDescriptionInput"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="방 소개를 입력하세요"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/roomDescriptionLabel" />
+
+    <!-- 최대 인원수 입력 -->
+
+    <TextView
+        android:id="@+id/roomMaxParticipantsLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="최대 인원수"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/roomDescriptionInput" />
+
+
+    <!-- 공개/비공개 체크박스 -->
+
+    <EditText
+        android:id="@+id/maxParticipantsInput"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:hint="최대 인원수"
+        android:inputType="number"
+        android:text="10"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/roomMaxParticipantsLabel" />
+
+    <CheckBox
+        android:id="@+id/publicCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="공개"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/maxParticipantsInput" />
+
+    <CheckBox
+        android:id="@+id/privateCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="비공개"
+        app:layout_constraintStart_toEndOf="@+id/publicCheckBox"
+        app:layout_constraintTop_toTopOf="@+id/publicCheckBox" />
+    <!-- 경고 메시지 -->
+    <TextView
+        android:id="@+id/warningTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="양식을 맞춰서 작성해주세요."
+        android:textColor="@android:color/holo_red_dark"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/privateCheckBox" />
+
+    <!-- 완료 버튼 -->
+    <Button
+        android:id="@+id/confirmButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="완료"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/privateCheckBox" />
+</androidx.constraintlayout.widget.ConstraintLayout>

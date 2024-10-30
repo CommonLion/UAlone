@@ -45,11 +45,16 @@
         <activity android:name=".ViewCommentsActivity"/>
         <activity android:name=".ViewLikedPostsActivity"/>
         <activity android:name=".ViewPostsActivity"/>
-        <activity android:name=".LiveTalkActivity" />
+        <activity android:name=".ChatRoomActivity" />
+
+        <!--        <activity android:name=".LiveTalkActivity" />-->
 
 
+<!--로그인 비활성화하고 라이브톡을 처음 페이지로 변경 나중에 주석처리 풀고, activity중복 안되게만 수정.-->
+<!--        <activity android:name=".Login"-->
+<!--            android:exported="true">-->
 
-        <activity android:name=".Login"
+        <activity android:name=".LiveTalkActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -58,6 +63,8 @@
         </activity>
         <activity android:name=".Register" />
         <activity android:name=".MainActivity" />
+
+
     </application>
 
 </manifest>
