@@ -6,26 +6,33 @@
 ## ⏲️ 개발 기간 
 - 2024.07.01(월) ~ 2024.08.29(목)
 - 프로젝트 기획
-- 피부병 객체 탐지 데이터 수집
-- 데이터 전처리 & 모델링
+- 유저 플로우/기능설계
+- 앱 개발
 - 서비스 구축
 - 발표 및 평가
 
 ## 🧑‍🤝‍🧑 개발자 소개
-- **임현서** : 팀장, Front-end
-- **정수영** : Back-end
-- **진우현** : Back-end
-- **김민성** : 데이터 분석 및 모델링
+- **정예진** : 팀장, Back-end
+- **김유강** : Back-end
+- **박동민** : Back-end
+- **정태윤** : Back-end
+- **강찬** : Front-end
+- **임혜빈** : Front-end
+- **정수영** : Front-end
+- **임혜빈** : Front-end
+- **김서원** : PM
+- **구가현** : Design
+- **한민지** : Design
 
 ## 💻 개발환경
-- **Version** : Dart 3.4.4
-- **IDE** : Visual Studio Code
-- **Framework** : Flutter 3.22.3, Flask, JAX
+- **Version** : 
+- **IDE** : 
+- **Framework** : 
 
 ## ⚙️ 기술 스택
-- **Server** : Firebase (Authentication, Firestore, Cloud Functions, Cloud Storage, FCM)
-- **DataBase** : Firebase Firestore
-- **WS/WAS** : (Firebase Hosting)
+- **Server** : 
+- **DataBase** : 
+- **WS/WAS** : 
 - **Conference** : Discord, Notion
 
 ## 📝 프로젝트 아키텍쳐
